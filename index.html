@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS If statements</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        h2 {
+            color: aqua;
+            font-weight: bold;
+            margin: auto;
+            margin-top: 10px;
+        }
+
+        p {
+            margin: auto;
+        }
+
+        button {
+            margin-top: 10px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <h2>TASK 1</h2>
+    <p>Write a JavaScript program that accept two integers and
+        display the larger. Also show if the two integers are equal.</p>
+    <button onclick="myfunction1()">click me to run the TASK</button>
+    <h2>TASK 2</h2>
+    <p> Write a program that takes input a number from user &
+        state whether the number is positive, negative or zero.</p>
+    <button onclick="myfunction2()">click me to run the TASK</button>
+    <h2>TASK 3</h2>
+    <p> Write a program that takes a character (i.e. string of
+        length 1) and returns true if it is a vowel, false otherwise</p>
+    <button onclick="myfunction3()">click me to run the TASK</button>
+    <h2>TASK 4</h2>
+    <p>5. Write a program that <br>
+        a. Store correct password in a JS variable. <br>
+        b. Asks user to enter his/her password <br>
+        c. Validate the two passwords: <br>
+        i. Check if user has entered password. If not, then
+        give message “ Please enter your password” <br>
+        ii. Check if both passwords are same. If they are
+        same, show message “Correct! The password you
+        entered matches the original password”. Show
+        “Incorrect password” otherwise.</p>
+    <button onclick="myfunction4()">click me to run the TASK</button>
+    <h2>TASK 5</h2>
+    <p> This if/else statement does not work. Try to fix it: <br>
+        var greeting;<br>
+        var hour = 13;<br>
+        if (hour < 18) { greeting="Good day" ; <br> else greeting="Good evening" ; }</p>
+        <h2 style="color: brown;">Answer:</h2>
+        <p> This if/else statement does not work. Try to fix it: <br>
+            var greeting;<br>
+            var hour = 13;<br>
+            if (hour < 18) { greeting="Good day" ; <br> else greeting="Good evening" ; }</p>
+            <h2>TASK 6</h2>
+            <p>7. Write a program that takes time as input from user in 24
+                hours clock format like: 1900 = 7pm. <br> Implement the
+                following case using if, else & else if statements</p>
+            <button onclick="myfunction6()">click me to run the TASK</button>
+            
+
+            <script>
+                function myfunction1() {
+                    var num1 = parseInt(prompt("please enter any number"));
+                    var num2 = parseInt(prompt("please enter any number"));
+                    if (num1 > num2) {
+                        document.getElementById("task-1").innerHTML = num1
+                    }
+                    else {
+                        document.getElementById("task-1").innerHTML = num2
+                    }
+                }
+
+                function myfunction2() {
+                    var userNumber = parseInt(prompt("please enter any number:"));
+                    if (userNumber < 0) {
+                        alert("its a negative number")
+                    }
+                    else if (userNumber === 0) {
+                        alert("you entered 0");
+                    }
+                    else {
+                        alert("you entered positive number")
+                    }
+                }
+
+                function myfunction3() {
+                    var userAlphabet = prompt("plese enter any alphabet:");
+                    var finalAlphabate = userAlphabet.toLowerCase();
+                    if (finalAlphabate === "I" || "O" || "U" || "v" || "e") {
+                        alert("you enterd one of the wovels")
+                    }
+                    else if (finalAlphabate !== "I" || "O" || "U" || "v" || "e") {
+                        alert("your enterd alphabate is const");
+                    }
+                    else {
+                        alert("please enter valid alphabate.")
+                    }
+                }
+
+                function myfunction4() {
+                    var myPasword = "javascript";
+                    var userPasword = prompt("please guess the pasword(hint: Ja.......)");
+                    // let finalPaswordByUser = userPasword.toLowerCase()
+                    if (userPasword == null || userPassword.trim() === "") {
+                        alert("please enter the pasword")
+                    }
+                    else if (userPasword === myPasword) {
+                        alert("hurrah! you guessed it correct")
+                    }
+                    else {
+                        alert("sorry! try again.")
+                    }
+                }
+                function myfunction6() {
+                    var time = prompt("please enter the time according to 24/h format (e.g 17:00)");
+                    if (time >= 0000 && time <= 1200) {
+                        alert("good morning!")
+                    }
+                    else if (time >= 1200 && time <= 1700) {
+                        alert("good aftenoon!")
+                    }
+                     else if (time >= 1700 && time <= 2100) {
+                        alert("good evening!")
+                    }
+                     else if (time >= 2100 && time <= 2359) {
+                        alert("good night!")
+                    }
+                    else {
+                        alert("may be you haven't enterd right input.")
+                    }
+                }
+            </script>
+</body>
+
+</html>
